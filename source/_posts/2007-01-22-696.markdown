@@ -1,0 +1,24 @@
+---
+author: andrewhao
+comments: true
+date: 2007-01-22 18:23:00+00:00
+layout: post
+slug: '696'
+title: No Content Found
+wordpress_id: 698
+categories:
+- Andrew 2.0
+---
+
+I have nothing earth-shattering to report, only that today in lecture I managed to miss the "d" key and typed out "emocracy" -- a word which certainly expresses my full subconscious wit (oh come on, don't tell me it hasn't ever happened to you). Usage: Hundreds of kids wearing Keds--this Dashboard concert is such an emocracy.  
+  
+I also managed to get sick on the very last day of break and it seems like my health is on a negative trajectory. The optimist in me sees it as a chance to build up those antibodies. And a chance to stock up on candy.  
+  
+In geek news, I nearly managed to wipe out all of my data yesterday night, thanks to a botched Ubuntu installation that apparently messed with my partition tables and didn't have the manners to put things back where it found em. After sweating bullets and doing a few good hours of research, I slapped together a [SystemRescueCd](http://www.sysresccd.org/Main_Page) and rescued three partitions from the big bad jaws of Entropy.  
+  
+I did manage to get that Ubuntu install finished. I'm currently running a dual-boot XP/Linux OS configuration on my desktop, with an additional copy of XP running in a VMWare  virtual machine in Linux. The plan is to use Linux primarily for school+work+email, with a virtual instance of XP for things like my Yahoo Widgets and Palm conduits. Hardcore Windows apps (such as Adobe Creative Suite apps) will require me to log into the native instance of XP (I hope to do this as little as possible).  
+  
+And finally, we at the [Porkbuns Initiative](http://www.porkbuns.net) have a slick teaser for you to look at, thanks to [Hsiufan's tinkering](http://hsiufan.eats.porkbuns.net/2007/01/22/comingsoon/) last night. What do we actually do? That's for you to find out.  
+  
+This will be the most academically rigorous semester I've ever taken. Bring it on, Powers-That-Be.  
+ 

@@ -1,0 +1,14 @@
+---
+author: andrewhao
+comments: true
+date: 2007-03-08 23:30:00+00:00
+layout: post
+slug: '716'
+title: No Content Found
+wordpress_id: 718
+categories:
+- Andrew 2.0
+---
+
+How did the [Spanish and Portuguese Dept at UC Berkeley get such a gorgeous website](http://spanish-portuguese.berkeley.edu/)?  
+

@@ -1,0 +1,15 @@
+---
+author: andrewhao
+comments: true
+date: 2007-07-25 17:17:00+00:00
+layout: post
+slug: summer-adventures-in-the-motherland
+title: Summer adventures in the Motherland
+wordpress_id: 769
+categories:
+- Andrew 2.0
+---
+
+Hullo! Sosho and I have returned from the motherland! We bring greetings and [a lot of photos](http://www.flickr.com/photos/g9labs/tags/summertrip/) :D If you can, flag one of us down and we'll tell you all about it. For now, we'll just throw a ton of photos your way...  
+  
+[![Great Wall "Hero Cards"](http://farm2.static.flickr.com/1045/899917366_daab7e65b1_m.jpg)](http://www.flickr.com/photos/g9labs/899917366/) [![Sosho and I at Tiananmen](http://farm2.static.flickr.com/1060/899919992_deb74ff157_m.jpg) ](http://www.flickr.com/photos/g9labs/899919992/) [![Just chillin'!](http://farm2.static.flickr.com/1330/899066443_de8b114b2e_m.jpg)](http://www.flickr.com/photos/g9labs/899066443/) [![Nothing like seeing old friends](http://farm2.static.flickr.com/1296/899069261_7d635a7627_m.jpg)](http://www.flickr.com/photos/g9labs/899069261/) [![Night market, South Side](http://farm2.static.flickr.com/1084/899931380_f5263f9153_m.jpg)](http://www.flickr.com/photos/g9labs/899931380/) [![English School Friends](http://farm2.static.flickr.com/1226/899079721_bcecb31f60_m.jpg)](http://www.flickr.com/photos/g9labs/899079721/) [![Street View](http://farm2.static.flickr.com/1415/899082309_e986db3544_m.jpg)](http://www.flickr.com/photos/g9labs/899082309/) [![The spires of the mosque](http://farm2.static.flickr.com/1201/899084413_44c29cdf4c_m.jpg)](http://www.flickr.com/photos/g9labs/899084413/) [![One of our buddies](http://farm2.static.flickr.com/1043/899943586_6a2ae038f8_m.jpg)](http://www.flickr.com/photos/g9labs/899943586/) [![Bus view.](http://farm2.static.flickr.com/1208/899089675_67c8c1ddcb_m.jpg)](http://www.flickr.com/photos/g9labs/899089675/) [![This guy can take the heat.](http://farm2.static.flickr.com/1377/899094851_980307a939_m.jpg)](http://www.flickr.com/photos/g9labs/899094851/) [![Scene at the bazaar, Pt 2](http://farm2.static.flickr.com/1142/899099823_8494aa7c23_m.jpg)](http://www.flickr.com/photos/g9labs/899099823/) [![Scene at the bazaar, Pt 1](http://farm2.static.flickr.com/1119/899958628_2a133cf91c_m.jpg)](http://www.flickr.com/photos/g9labs/899958628/) [![Night market in front of one of the schools](http://farm2.static.flickr.com/1025/899961302_c064983bf8_m.jpg)](http://www.flickr.com/photos/g9labs/899961302/) [![Friends & Family!](http://farm2.static.flickr.com/1112/899969310_63050a095d_m.jpg)](http://www.flickr.com/photos/g9labs/899969310/) [![Awaken the dawn](http://farm2.static.flickr.com/1397/899966784_70082d69c2_m.jpg)](http://www.flickr.com/photos/g9labs/899966784/) [![Bus seat dreams](http://farm2.static.flickr.com/1311/899071955_725048d281_m.jpg)](http://www.flickr.com/photos/g9labs/899071955/) [![Sosho goes for variety](http://farm2.static.flickr.com/1197/899963752_06f4eaafa9_m.jpg)](http://www.flickr.com/photos/g9labs/899963752/)

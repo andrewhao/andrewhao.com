@@ -1,0 +1,18 @@
+---
+author: andrewhao
+comments: true
+date: 2007-09-06 08:01:53+00:00
+layout: post
+slug: '785'
+title: No Content Found
+wordpress_id: 785
+categories:
+- Andrew 2.0
+- Geek
+---
+
+Oooooooh, [Google Reader](http://reader.google.com) got search capabilities! And AJAX-compatible back/forward buttons! And other goodies! I just nearly pooped in my pants when I saw the new changes go up.
+
+Thank you thank you thank you, powers-that-be and code monkeys at Google. What a cool toy.
+
+Nobody is paying me to say this. Good night.

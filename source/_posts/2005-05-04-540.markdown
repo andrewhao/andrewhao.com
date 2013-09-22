@@ -1,0 +1,15 @@
+---
+author: andrewhao
+comments: true
+date: 2005-05-04 01:14:49+00:00
+layout: post
+published: false
+slug: '540'
+title: .
+wordpress_id: 540
+categories:
+- High School
+- Words
+---
+
+You said Hold my hand and we'll walk down corn-starch streets and paper-back alleys like it don't mean a pollywonkin' thing. Well save your words for the Twenty Seven train, when tomorrow (says John Coltrane) is never this close again.

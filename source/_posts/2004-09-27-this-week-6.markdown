@@ -1,0 +1,14 @@
+---
+author: andrewhao
+comments: true
+date: 2004-09-27 22:34:52+00:00
+layout: post
+published: false
+slug: this-week-6
+title: This Week
+wordpress_id: 456
+categories:
+- High School
+---
+
+back in berkeley with tupperware this time. and lots of snack food.

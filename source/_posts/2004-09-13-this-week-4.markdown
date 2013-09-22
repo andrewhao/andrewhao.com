@@ -1,0 +1,14 @@
+---
+author: andrewhao
+comments: true
+date: 2004-09-13 16:11:19+00:00
+layout: post
+published: false
+slug: this-week-4
+title: THIS WEEK
+wordpress_id: 448
+categories:
+- High School
+---
+
+the fro gains notoreity.

@@ -1,0 +1,23 @@
+---
+author: andrewhao
+comments: true
+date: 2004-01-30 17:03:07+00:00
+layout: post
+published: false
+slug: xangatransfer-10
+title: xangaTransfer 10
+wordpress_id: 322
+categories:
+- High School
+---
+
+dah.. i hate this superficiality. more and more i'm getting wrapped up with what's on the outside.. but since when was it the outside that mattered? _melt away this heart of stone. _
+
+genuinity, that's what we need.
+to state it in laymen's terms: don't be frontin'. werd.
+
+speaking of ghetto gangster talk, i look back on my 7th grade days and can't help but laugh.. hahahaha i remember when i used to log onto AIM to my five-person buddylist with a profile that contained some G-rated rap lyrics cuz i wanted to be cool, you know. and i used to AIM slang like a loose cannon: "dun u think dis is so kewl?"
+
+absolutely, Seventh Grade Andrew. ah, the good old days. i've got some repressed loser-status junior high memories just waiting to get out, i'll post more about them at a later date.
+
+and the hair: by Mandate of Mom, the 'fro is taking another two-month hiatus while i walk around campus feeling bald and silly (it's actually still relatively long). 'till then, i'm trying to grow a goatee (going for the youth pastor look) but failing miserably. too bad all i got is, as daniel lui put it, "short asian stubble". maybe it'll give me a gen-X look, or perhaps the punk rawker look, but probably just a lame look. hm, looking idiotic, it sure beats superficiality.

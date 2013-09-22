@@ -1,0 +1,14 @@
+---
+author: andrewhao
+comments: true
+date: 2005-05-11 09:53:07+00:00
+layout: post
+published: false
+slug: teh-fun
+title: Teh Fun
+wordpress_id: 544
+categories:
+- High School
+---
+
+Teh Fun, yes, teh fun, is now. Finals week is teh Fun.

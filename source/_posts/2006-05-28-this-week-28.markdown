@@ -1,0 +1,14 @@
+---
+author: andrewhao
+comments: true
+date: 2006-05-28 16:10:10+00:00
+layout: post
+published: false
+slug: this-week-28
+title: THIS WEEK
+wordpress_id: 636
+categories:
+- High School
+---
+
+New starts, new beginnings.
