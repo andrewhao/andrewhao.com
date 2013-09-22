@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Quotes | My Octopress Blog]]></title>
+  <link href="http://andrewhao.github.io/andrewhao/blog/categories/quotes/atom.xml" rel="self"/>
+  <link href="http://andrewhao.github.io/andrewhao/"/>
+  <updated>2013-09-22T14:58:42-07:00</updated>
+  <id>http://andrewhao.github.io/andrewhao/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Quotables]]></title>
+    <link href="http://andrewhao.github.io/andrewhao/blog/2010/10/15/quotables/"/>
+    <updated>2010-10-15T15:50:18-07:00</updated>
+    <id>http://andrewhao.github.io/andrewhao/blog/2010/10/15/quotables</id>
+    <content type="html"><![CDATA[<p><em>(While chatting about Israel&rsquo;s skinny jeans).</em></p>
+
+<p>&ldquo;I don&rsquo;t like skinny jeans, they&rsquo;re too tight for me. Or maybe my legs are fat.&rdquo;</p>
+
+<p>-Ken</p>
+]]></content>
+  </entry>
+  
+</feed>
