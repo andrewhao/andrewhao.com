@@ -2,7 +2,7 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://andrewhao.com/andrewhao/andrewhao
+url: http://www.andrewhao.com
 title: Finding Momentum
 subtitle: 
 author: Andrew Hao
@@ -69,7 +69,7 @@ github_show_profile_link: true
 github_skip_forks: true
 
 # Twitter
-twitter_user:
+twitter_user: andrewhao
 twitter_tweet_button: true
 
 # Google +1
@@ -91,10 +91,13 @@ delicious_count: 3
 
 # Disqus Comments
 disqus_short_name: andrewhao
-disqus_show_comment_count: false
+disqus_show_comment_count: true
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: "UA-2330913-1"
 
 # Facebook Like
 facebook_like: false
+
+# Typekit ID
+typekit_kitid: "fqn4sju"
