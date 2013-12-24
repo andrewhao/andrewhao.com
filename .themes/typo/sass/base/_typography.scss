@@ -1,7 +1,7 @@
 $sans: "Helvetica Neue", Arial, sans-serif !default;
 $serif: "adobe-garamond-pro-1","adobe-garamond-pro-2", Georgia, serif !default;
 $mono: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace !default;
-$heading-font-family: "adobe-garamond-pro-1","adobe-garamond-pro-2", "Georgia", serif !default;
+$heading-font-family: "estilo-regular-1","estilo-regular-2",sans-serif;
 $header-title-font-family: $heading-font-family !default;
 $header-subtitle-font-family: $heading-font-family !default;
 
@@ -11,13 +11,10 @@ body {
 
 .hentry {
   .entry-title {
-    font-variant: small-caps;
+    text-transform: lowercase;
     font-size: 2em;
     margin-bottom: 0.5em;
     letter-spacing: 0.2em;
-    &::first-letter {
-      font-size: 1.5em;
-    }
   }
   .entry-content {
     h2, h3, h4, h5, h6 {

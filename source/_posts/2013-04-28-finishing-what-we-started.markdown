@@ -6,6 +6,8 @@ layout: post
 slug: finishing-what-we-started
 title: Finishing what we started
 wordpress_id: 2365
+cover: http://farm9.staticflickr.com/8261/8688066540_7aa44150a0.jpg
+cover_alt: Some RBO youth take off at the start line.
 categories:
 - Oakland
 - Running
@@ -17,8 +19,6 @@ tags:
 - running for a better oakland
 - youth
 ---
-
-[caption id="" align="alignnone" width="500"][![RBO @ the Oakland Running Festival](http://farm9.staticflickr.com/8261/8688066540_7aa44150a0.jpg)](http://www.flickr.com/photos/andrewhao/8688066540/) Some RBO youth take off at the start line.[/caption]
 
 One thing I like about volunteering with RBO is the chance to meet up with kids from all different parts of Oakland. This year I was paired up with S, a kid from the Fruitvale district attending a local charter school just a few blocks from me.
 
