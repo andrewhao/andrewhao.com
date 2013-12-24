@@ -13,7 +13,7 @@ body {
   .entry-title {
     font-family: $heading-font-family;
     text-transform: lowercase;
-    font-size: 2em;
+    font-size: 2.5em;
     margin-bottom: 0.5em;
     letter-spacing: 0.2em;
   }
@@ -39,6 +39,8 @@ body {
 // Fonts
 .heading {
   font-family: $heading-font-family;
+  text-transform: lowercase;
+  font-size: 1.2em;
 }
 .sans { font-family: $sans; }
 .serif { font-family: $serif; }
@@ -94,11 +96,12 @@ blockquote {
 /* Lettrines */
 .lettrine {
   & > p:first-child::first-letter, & > h2:first-child + p::first-letter {
+    font-family: $heading-font-family;
     line-height: 0.7;
-    margin: 0.225em 0.159em 0 0;
+    margin: .1em .1em 0 0;
     float: left;
     text-transform: capitalize;
-    font-size: 3.15em;
+    font-size: 3em;
   }
 }
 
