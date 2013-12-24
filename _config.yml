@@ -2,12 +2,12 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://andrewhao.github.io/andrewhao.com
+url: http://andrewhao.com/andrewhao/andrewhao
 title: Finding Momentum
 subtitle: 
 author: Andrew Hao
 simple_search: http://google.com/search
-description: The personal blog of Andrew Hao
+description: The personal blog of Andrew Hao.
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -16,7 +16,7 @@ description: The personal blog of Andrew Hao
 date_format: "ordinal"
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
-subscribe_rss: /github/atom.xml
+subscribe_rss: /atom.xml
 subscribe_email:
 # RSS feeds can list your email address if you like
 email:
