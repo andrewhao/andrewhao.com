@@ -8,6 +8,7 @@ title: Finishing what we started
 wordpress_id: 2365
 cover: http://farm9.staticflickr.com/8261/8688066540_7aa44150a0.jpg
 cover_alt: Some RBO youth take off at the start line.
+thumbnail: http://farm9.staticflickr.com/8261/8688066540_7aa44150a0_q.jpg
 categories:
 - Oakland
 - Running
