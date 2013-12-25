@@ -101,3 +101,8 @@ facebook_like: false
 
 # Typekit ID
 typekit_kitid: "fqn4sju"
+
+# --------------------
+# samwhited/typo theme
+# --------------------
+posts_per_row: 3
