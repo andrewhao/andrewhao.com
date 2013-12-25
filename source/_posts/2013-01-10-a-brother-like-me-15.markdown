@@ -6,15 +6,16 @@ layout: post
 slug: a-brother-like-me-15
 title: A brother like me
 wordpress_id: 2345
+thumbnail: http://farm4.staticflickr.com/3701/11542289994_ce2cd5a3aa_q.jpg
+cover: http://farm4.staticflickr.com/3701/11542289994_ce2cd5a3aa_b.jpg
+cover_alt: Ran into Mike on a rainy day in Berkeley. We finally got a photo together.
+cover_link: http://www.flickr.com/photos/andrewhao/11542289994/
 categories:
 - Andrew 2.0
 - Friends
 - Mike
 - Oakland
 ---
-
-[caption id="attachment_2347" align="alignnone" width="375"][![Ran into Mike on a rainy day in Berkeley. We finally got a photo together.](http://www.andrewhao.com/wp-content/uploads/2013/01/2012-12-26-10.39.54-375x500.jpg)](http://www.andrewhao.com/2013/01/09/a-brother-like-me-15/2012-12-26-10-39-54/) Ran into Mike on a rainy day in Berkeley. We finally got a photo together.[/caption]
-
 Years have passed since I've last written about Mike. I see him every once in awhile in Berkeley, still. I think about him from time to time -- wonder how he's doing. I catch him out the corner of my eye the week before I leave for vacation, hanging around at Gypsy's. "Mike!" I call back to him, and he turns around with a big grin on his face. The sidewalks are soaked.
 
 "It's my birthday tomorrow" he tells me, and I remember how close to Christmas it is.
