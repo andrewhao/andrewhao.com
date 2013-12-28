@@ -9,11 +9,13 @@ wordpress_id: 2309
 categories:
 - Life
 - Music
+- Grace
 ---
-
-http://www.youtube.com/watch?v=x0liNLHmvKY
-
 In the recent theme of grace, maybe one of the reasons I really like country songs and the myths they tell is because you can feel the grit in the stories. Country protagonists live out their flaws fully (for better or worse) but there's always that redemptive thread.
+
+<iframe width="560" height="315"
+src="//www.youtube.com/embed/QcPqWutvx0E" frameborder="0"
+allowfullscreen></iframe>
 
 Or maybe I just want to drive a pickup truck.
 
