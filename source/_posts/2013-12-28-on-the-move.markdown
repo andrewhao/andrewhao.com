@@ -7,10 +7,11 @@ categories:
 - running
 - injury
 - inspiration
+cover: http://distilleryimage3.ak.instagram.com/56d9158a83af11e2bccc22000a1f8cda_7.jpg
+cover_link: http://instagram.com/p/WYTHCBCiG_/
+cover_title: The year (on foot, on wheels, in water) in review
+thumbnail: http://distilleryimage3.s3.amazonaws.com/56d9158a83af11e2bccc22000a1f8cda_6.jpg
 ---
-
-This was a pretty significant year for me in terms of the active life. A
-lot of ups and downs:
 
 ### Steep Ravine 50K
 
