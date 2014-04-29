@@ -87,4 +87,5 @@ We run a bit more in silence.
 
 S and I run a steady, paced half marathon together, and you can see his spirits rise as he pushes through his pain to get across the finish line, tired and happy. Z is somewhere behind us, having cramped up but he finishes too. And I'm overcome with pride for S and what he's fighting for in his life.
 
-[caption id="" align="alignnone" width="500"][![RBO @ the Oakland Running Festival](http://farm9.staticflickr.com/8398/8687014789_9d7f600e8d.jpg)](http://www.flickr.com/photos/andrewhao/8687014789/) Tired and happy.[/caption]
+<img alt="RBO @ the Oakland Running Festival" src="http://farm9.staticflickr.com/8398/8687014789_9d7f600e8d.jpg" />
+<p>(Tired and happy.)</p>
