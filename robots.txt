@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://andrewhao.github.io/andrewhao/sitemap.xml 
+Sitemap: http://www.andrewhao.com/sitemap.xml 

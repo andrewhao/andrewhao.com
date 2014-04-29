@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Geek | Finding Momentum]]></title>
+  <link href="http://www.andrewhao.com/category/geek/atom.xml" rel="self"/>
+  <link href="http://www.andrewhao.com/"/>
+  <updated>2014-04-29T12:46:45-07:00</updated>
+  <id>http://www.andrewhao.com/</id>
+  <author>
+    <name><![CDATA[Andrew Hao]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Watch the McCain-Obama debate Twitter feed]]></title>
+    <link href="http://www.andrewhao.com/2008/09/26/watch-the-mccain-obama-debate-twitter-feed/"/>
+    <updated>2008-09-26T16:01:53-07:00</updated>
+    <id>http://www.andrewhao.com/2008/09/26/watch-the-mccain-obama-debate-twitter-feed</id>
+    <content type="html"><![CDATA[<p>For those of you who are watching the McCain-Obama debates tonight, you can check out Twitter&rsquo;s election feed at <a href="http://election.twitter.com">http://election.twitter.com</a>.</p>
+
+<p><a href="http://www.andrewhao.com/wp-content/uploads/2008/09/twitter-election-debate.jpg"><img src="http://www.andrewhao.com/wp-content/uploads/2008/09/twitter-election-debate-300x275.jpg" alt="" /></a></p>
+
+<p>You&rsquo;ll basically be watching Twitterers react to the debates in real time&mdash;pretty amazing, if you ask me. It&rsquo;s like watching a national conversation unfurl right in front of your eyes. Try it out tonight!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Could I be an entrepreneur?]]></title>
+    <link href="http://www.andrewhao.com/2008/03/11/could-i-be-an-entrepreneur/"/>
+    <updated>2008-03-11T01:26:12-07:00</updated>
+    <id>http://www.andrewhao.com/2008/03/11/could-i-be-an-entrepreneur</id>
+    <content type="html"><![CDATA[<p>This semester I&rsquo;m taking IEOR 190A &ndash; Engineering Entrepreneurship. We are made up of a bunch of business types and engineering types and business-engineering types who come together to figure out how to start a business in the tech sphere.</p>
+
+<p>Here&rsquo;s how I&rsquo;d explain this class: come up with a business plan for a company in semester, then execute it. At the end of the semester, you should have the tools to <em>actually do it</em>. Yow!</p>
+
+<p>The thought of (or idea of) entrepreneurship is really alluring. I think it&rsquo;s the <em>idea of creating</em> something where there was nothing, starting and sustaining a great idea or product that could change the world (or something slightly less schnazzy, sure) seems so rewarding.</p>
+
+<p>Of course,  in class we only hear from the smiling guest lecturers who navigated shaky start-ups through uncertain waters and nailed crucial business decisions to accelerate earnings by 1000% margins. We always hear about the mythical serial entrepreneur, the quintessential American man or woman who by a mix of cunning insight, dogged perseverance and arbitrary market whims (e.g. sheer luck), see their dreams become reality.</p>
+
+<p>We don&rsquo;t always hear from the entrepreneur whose family life is strained because he always travels or stays late in the office. We don&rsquo;t always hear from the men and women who burn through money on dud after dud.</p>
+
+<p>I worked with my friend Dave at FAQLY, his social networking startup two years ago my sophomore year. Dave was way passionate about the network and its potential. I knew it took a toll on him. Most of his waking hours were spent dreaming (I like to think) of ideas. He didn&rsquo;t sleep much.  He had to play many roles, from visionary to manager to chauffeur (haha, hi Dave!).</p>
+
+<p>Anyways, my point was that even though there was a high potential for failure and a <em>ridiculously</em> demanding workload, Dave persevered through it all. Two years later, Dave&rsquo;s working on another project now (have you heard of <a href="http://www.thinkgos.com">gOS</a>?). And I talk to him occasionally and he tells me that he&rsquo;s still not sleeping much. I know he&rsquo;s just as passionate.</p>
+
+<p>I&rsquo;m starting to suspect that the draw to start a company is less about the idea than it is about the <em>feeling</em> of creating. It&rsquo;s elusive and fleeting but when you catch it, you&rsquo;re energized to try some more.</p>
+
+<p>Hsiu-Fan and I are still a bit hesitant to call <a href="http://wejoinin.com">Wejoinin</a> anything more than a pet project. Could it be anything more? Who knows. We&rsquo;re treading carefully on that idea as we carefully calibrate our expectations. It&rsquo;s been kind of cool as I start applying what I learn from IEOR 190A to Wejoinin.</p>
+
+<p>One thing&rsquo;s for sure, though. I&rsquo;m in it for love of the game. I&rsquo;m there because I feel alive when I create. Whether that means I&rsquo;m behind the terminal or on the field or whatever remains to be seen.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Wordpress Bughunt]]></title>
+    <link href="http://www.andrewhao.com/2008/01/27/wordpress-bughunt/"/>
+    <updated>2008-01-27T21:48:04-08:00</updated>
+    <id>http://www.andrewhao.com/2008/01/27/wordpress-bughunt</id>
+    <content type="html"><![CDATA[<p>I spent a good four hours today digging through <a href="http://www.wordpress.org">Wordpress</a> code, trying to get our <a href="http://www.ocf.berkeley.edu/~ccf">Cal Christian Fellowship</a> Web site back up.</p>
+
+<p>The problem: the page seemed to freeze when loading page content. The request would time out, leaving a half-loaded page sans content. I dug into the theme at first, trying to track down which function call could have barfed. I tracked it into the apply_filters() call in the the post.</p>
+
+<p>Wordpress uses a filtering system to manage content. This lets us add filters over all kinds of content. I realize that the problem was stemming from the <a href="http://dev.wp-plugins.org/wiki/TextControl">Text Control</a> plugin, where something had barfed!</p>
+
+<p>I disabled the plugin and voila! We were good to go again.</p>
+
+<p>Since we only really used Textile markup on the CCF site, I just re-enabled the default Textile plugin and we were back in business.</p>
+
+<p>I don&rsquo;t know for the life of me what went wrong over the weekend in the Text Control plugin, but I don&rsquo;t have the cajones or the time to dig through server logs, et. al. and find out.</p>
+
+<p>Geeking out like nobody&rsquo;s business,</p>
+
+<p>-Andrew</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Feeling awesome today]]></title>
+    <link href="http://www.andrewhao.com/2007/12/05/feeling-awesome-today/"/>
+    <updated>2007-12-05T09:55:08-08:00</updated>
+    <id>http://www.andrewhao.com/2007/12/05/feeling-awesome-today</id>
+    <content type="html"><![CDATA[<p>So for our <a href="http://inst.eecs.berkeley.edu/~cs188/fa07/announcements.html">CS188 (Artificial Intelligence)</a> project, <a href="http://inst.eecs.berkeley.edu/~cs188/fa07/projects/contest/contest.html">Capture-the-Flag Pac-Man</a>, I&rsquo;m responsible for writing a script that does some processing and analysis on a game board, simulating a Pac-Man agent (my other group members are responsible for far cooler things, like inference and heuristics, but humor me here).</p>
+
+<p>I most definitely need at least several hours of computation time to get the results I need, but figured that I&rsquo;d do best by dividing up the labor between CPUs. So last night I set five cores' worth of computational power a-workin'&mdash;1 on my desktop, 2 on my laptop and 2 remote cores on Hsiu-Fan&rsquo;s sweet desktop.</p>
+
+<p>(Then I disconnected sometime last night from Hsiu-Fan&rsquo;s computer, abruptly killing my processes. I&rsquo;m back on using UNIX <a href="http://www.askbjoernhansen.com/2006/02/07/happy_unix_screen.html"><code>screen</code></a> because I read I can remotely detach windows and processes, but I&rsquo;m actually not sure if the process keeps chuggin' in the case when your program spawns X windows and you&rsquo;ve disconnected).</p>
+
+<p>So humor me here, I feel pretty awesome right now. My room&rsquo;s a bit warm with the sheer heat dissipation from my computers, but at least that negates the need for human companionship. Tally-ho!</p>
+
+<p>&mdash;&ndash; Edit: the joys of Python:</p>
+
+<p><img src="http://imgs.xkcd.com/comics/python.png" alt="" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Meeting Joe Hewitt]]></title>
+    <link href="http://www.andrewhao.com/2007/12/04/meeting-joe-hewitt/"/>
+    <updated>2007-12-04T00:45:30-08:00</updated>
+    <id>http://www.andrewhao.com/2007/12/04/meeting-joe-hewitt</id>
+    <content type="html"><![CDATA[<p>I shook <a href="http://www.joehewitt.com">Joe Hewitt</a>&rsquo;s hand today (psst, he&rsquo;s the guy who did tons of Mozilla stuff but most notably built <a href="http://www.getfirebug.com/">Firebug</a>). I stammered a lot. But that&rsquo;s okay, because I shook Joe Hewitt&rsquo;s hand.</p>
+
+<p>&ldquo;Fanboy&rdquo; says the Facebook engineer behind me, under his breath.</p>
+]]></content>
+  </entry>
+  
+</feed>

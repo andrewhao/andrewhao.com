@@ -6,9 +6,9 @@
 <head>
 <meta http-equiv="refresh" content="0">
 
-<meta http-equiv="set-cookie" content="cf_use_ob=http; expires=Sun, 22-Sep-13 21:41:32 GMT; path=/">
+<meta http-equiv="set-cookie" content="cf_use_ob=http; expires=Mon, 23-Sep-13 05:44:47 GMT; path=/">
 
-<meta http-equiv="set-cookie" content="cf_ob_info=520:b2228355f4c0707:SJC; expires=Sun, 22-Sep-13 21:41:32 GMT; path=/">
+<meta http-equiv="set-cookie" content="cf_ob_info=520:b24ec13c4f20707:SJC; expires=Mon, 23-Sep-13 05:44:47 GMT; path=/">
 
 
 <title>a2.cpimg.com | 520: Web server is returning an unknown error</title>
@@ -93,9 +93,9 @@
 
         <div class="cf-error-footer cf-wrapper">
   <p>
-    <span class="cf-footer-item">CloudFlare Ray ID: <strong>b2228355f4c0707</strong></span>
+    <span class="cf-footer-item">CloudFlare Ray ID: <strong>b24ec13c4f20707</strong></span>
     <span class="cf-footer-separator">&bull;</span>
-    <span class="cf-footer-item"><span data-translate="your_ip">Your IP</span>: 50.131.228.126</span>
+    <span class="cf-footer-item"><span data-translate="your_ip">Your IP</span>: 173.228.39.226</span>
     <span class="cf-footer-separator">&bull;</span>
     <span class="cf-footer-item"><a data-orig-proto="https" data-orig-ref="cloudflare.com/support" id="support_link" data-translate="help" target="_blank">Help</a></span>
     <span class="cf-footer-separator">&bull;</span>
