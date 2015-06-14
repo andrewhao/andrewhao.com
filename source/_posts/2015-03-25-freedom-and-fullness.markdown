@@ -6,11 +6,10 @@ comments: true
 categories:
 - LA
 - Moving
-cover: https://farm4.staticflickr.com/3875/14603294084_16c6326440_d.jpg
-thumbnail: https://farm4.staticflickr.com/3875/14603294084_16c6326440_q_d.jpg
-cover_title: On the slopes of Mt. Wilson, trying out the new
-cover_link: https://www.flickr.com/photos/andrewhao/14603294084/
-
+cover: https://farm9.staticflickr.com/8839/17734435568_530504a941_z.jpg
+thumbnail: https://farm9.staticflickr.com/8839/17734435568_530504a941_q.jpg
+cover_title: Exploring the coastline
+cover_link: https://www.flickr.com/photos/andrewhao/17734435568/
 ---
 Driving back up on the 5, I heard a song erupting in the meadows. The windows were down and the air was heavy with the scent of wildflowers. I'd been driving long, winding single lane country roads for forty miles, these long expanses of California farmland, green as far as the eye could see. And I swear, I could have heard singing.
 
