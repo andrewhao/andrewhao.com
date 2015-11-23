@@ -7,10 +7,10 @@ categories:
 - running
 - injury
 - inspiration
-cover: http://distilleryimage3.ak.instagram.com/56d9158a83af11e2bccc22000a1f8cda_7.jpg
-cover_link: http://instagram.com/p/WYTHCBCiG_/
+cover: https://c1.staticflickr.com/3/2891/11672187815_e15058639b_z.jpg
+cover_link: https://www.flickr.com/photos/andrewhao/11675409886/in/album-72157639246313225/
 cover_title: The year (on foot, on wheels, in water) in review
-thumbnail: http://distilleryimage3.s3.amazonaws.com/56d9158a83af11e2bccc22000a1f8cda_6.jpg
+thumbnail: https://c1.staticflickr.com/3/2891/11672187815_e15058639b_q.jpg
 ---
 
 ### Steep Ravine 50K

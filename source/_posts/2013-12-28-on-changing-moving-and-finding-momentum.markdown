@@ -10,8 +10,8 @@ categories:
 - life
 - Andrew 2.0
 
-cover: http://distilleryimage6.s3.amazonaws.com/7cd1e752ba5611e2ab0f22000a9f305a_7.jpg
-thumbnail: http://distilleryimage6.s3.amazonaws.com/7cd1e752ba5611e2ab0f22000a9f305a_7.jpg
+cover: https://c1.staticflickr.com/1/625/22931476830_2d2f38c614_z.jpg
+thumbnail: https://c1.staticflickr.com/1/625/22931476830_2d2f38c614_q.jpg
 cover_title: Cloud elevator. Taken at Mt. Tam.
 cover_link: http://instagram.com/p/ZLYqJkCiFu/
 ---
