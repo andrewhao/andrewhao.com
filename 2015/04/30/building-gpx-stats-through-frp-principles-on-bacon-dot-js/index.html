@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Building GPX stats through FRP principles with Bacon.js - The Sweet Spot</title>
+  <meta name="author" content="Andrew Hao">
+
+  
+  <meta name="description" content="With my current fascination with tracking workouts and location-based-activities, I have been interested in how I might be able to rewrite some of my &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.g9labs.com/2015/04/30/building-gpx-stats-through-frp-principles-on-bacon-dot-js">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="The Sweet Spot" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-2330913-9']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">The Sweet Spot</a></h1>
+  
+    <h2>Andrew Hao's thoughts about software engineering, design, and anything shiny.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:www.g9labs.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/notes">Notes</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Building GPX stats through FRP principles with Bacon.js</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-04-30T12:54:00-07:00" pubdate data-updated="true">Apr 30<span>th</span>, 2015</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>With my current fascination with <a href="http://github.com/andrewhao/stressfactor">tracking workouts and location-based-activities</a>, I have been interested in how I might be able to rewrite some of my stats logic with FRP principles.</p>
+
+<h3>What is FRP?</h3>
+
+<p>FRP, or Functional Reactive Programming, is often defined as &ldquo;functional programming over values that change over time&rdquo;. It uses functional composition for streams of data that may appear in an infinite stream of data for some far indeterminate future &ndash; these types of use cases are served well by FRP which <a href="http://en.wikipedia.org/wiki/Functional_reactive_programming">&ldquo;(simplifies) these problems by explicitly modeling time&rdquo;</a>.</p>
+
+<h3>GPS &ndash; your location, varied over time.</h3>
+
+<p>A great application of this would be a workout. Let&rsquo;s say I wanted to build an app that received realtime updates on a person&rsquo;s position. Say the app was a Node server that received this JSON blob from a web API as a location update:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='json'><span class='line'><span class="p">{</span> <span class="err">&#39;lat&#39;:</span> <span class="err">29.192414,</span>
+</span><span class='line'>  <span class="err">&#39;lon&#39;:</span> <span class="err">148.113241,</span>
+</span><span class='line'>  <span class="err">&#39;ele&#39;:</span> <span class="err">122.1,</span>
+</span><span class='line'>  <span class="err">&#39;time&#39;:</span> <span class="err">&#39;2015-04-18T13:54:56Z&#39;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Say that some time later, the API receives this JSON blob:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='json'><span class='line'><span class="p">{</span> <span class="err">&#39;lat&#39;:</span> <span class="err">29.192424,</span>
+</span><span class='line'>  <span class="err">&#39;lon&#39;:</span> <span class="err">148.113251,</span>
+</span><span class='line'>  <span class="err">&#39;ele&#39;:</span> <span class="err">123.1,</span>
+</span><span class='line'>  <span class="err">&#39;time&#39;:</span> <span class="err">&#39;2015-04-18T13:55:26Z&#39;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>So we have these data points, that the user has moved <code>+0.00001</code> latitude points and <code>+0.00001</code> longitude points, climbing a total of <code>+1.0</code> meters, over a period of <code>30</code> seconds.</p>
+
+<h4>Exercise: Get my instantaneous velocity</h4>
+
+<p>If we performed this imperatively, we would write it something like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">locations</span> <span class="o">=</span> <span class="p">[{</span> <span class="cm">/*json*/</span> <span class="p">},</span> <span class="p">{</span> <span class="cm">/*json*/</span> <span class="p">}</span> <span class="cm">/*, ...*/</span><span class="p">];</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">last</span> <span class="o">=</span> <span class="nx">locations</span><span class="p">[</span><span class="nx">locations</span><span class="p">.</span><span class="nx">length</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">secondToLast</span> <span class="o">=</span> <span class="nx">locations</span><span class="p">[</span><span class="nx">locations</span><span class="p">.</span><span class="nx">length</span><span class="o">-</span><span class="mi">2</span><span class="p">];</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">timeDelta</span> <span class="o">=</span> <span class="nx">last</span><span class="p">.</span><span class="nx">time</span> <span class="o">-</span> <span class="nx">secondToLast</span><span class="p">.</span><span class="nx">time</span><span class="p">;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">distanceDelta</span> <span class="o">=</span> <span class="nx">getDistance</span><span class="p">(</span><span class="nx">last</span><span class="p">.</span><span class="nx">lon</span><span class="p">,</span> <span class="nx">last</span><span class="p">.</span><span class="nx">lat</span><span class="p">,</span> <span class="nx">secondToLast</span><span class="p">.</span><span class="nx">lon</span><span class="p">,</span> <span class="nx">secondToLast</span><span class="p">.</span><span class="nx">lat</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">velocity</span> <span class="o">=</span> <span class="nx">distanceDelta</span> <span class="o">/</span> <span class="nx">timeDelta</span><span class="p">;</span>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">velocity</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>With FRP, it might look more like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">locationStream</span> <span class="o">=</span> <span class="p">[{</span> <span class="cm">/*json*/</span> <span class="p">},</span> <span class="p">{</span> <span class="cm">/*json*/</span> <span class="p">}</span> <span class="cm">/*, ...some JSON objects that might appear in the future */</span><span class="p">];</span>
+</span><span class='line'><span class="nx">locationStream</span><span class="p">.</span><span class="nx">slidingWindow</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</span><span class='line'>              <span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">pairs</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                <span class="kd">var</span> <span class="nx">timeDelta</span> <span class="o">=</span> <span class="nx">pairs</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">time</span> <span class="o">-</span> <span class="nx">pairs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">time</span><span class="p">;</span>
+</span><span class='line'>                <span class="kd">var</span> <span class="nx">distanceDelta</span> <span class="o">=</span> <span class="nx">getDistance</span><span class="p">(</span><span class="nx">pairs</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">lon</span><span class="p">,</span> <span class="nx">pairs</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">lat</span><span class="p">,</span> <span class="nx">pairs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">lon</span><span class="p">,</span> <span class="nx">pairs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">lat</span><span class="p">);</span>
+</span><span class='line'>                <span class="k">return</span> <span class="nx">distanceDelta</span> <span class="o">/</span> <span class="nx">timeDelta</span>
+</span><span class='line'>              <span class="p">})</span>
+</span><span class='line'>              <span class="p">.</span><span class="nx">onValue</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">velocity</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">velocity</span><span class="p">);</span>
+</span><span class='line'>              <span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>There is a key difference that is not easily demonstrated here &ndash; that the former imperative example requires that all JSON arrays be materialized at once &ndash; via db query, in-memory store, etc. It doesn&rsquo;t account for change in time.</p>
+
+<p>However, the latter functional example accounts for changing values of time as they appear over the stream &ndash; as soon as a new value shows up in the stream, the velocity is changed instantly.</p>
+
+<h3>Some more location-based experiments: rxlocation</h3>
+
+<p>I wrote up a library to parse various facts from a changing stream of GPS events, from instantaneous velocity, average velocity, moving/stopped status, etc.</p>
+
+<p>I investigated different reactive frameworks, mainly <a href="https://github.com/Reactive-Extensions/RxJS/">RxJS</a> and <a href="https://github.com/baconjs/bacon.js/">Bacon.js</a>. My takeaways were that RxJS does everything and the kitchen sink, but I got lost trying to reconcile Node streams with RxJS cold streams. Bacon.js just seemed to work for me, out of the box. I&rsquo;m still learning, so I hope to have a better understanding of the core issues here.</p>
+
+<p>You can check it out here: <a href="https://github.com/andrewhao/rxlocation">rxlocation</a>.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Andrew Hao</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-04-30T12:54:00-07:00" pubdate data-updated="true">Apr 30<span>th</span>, 2015</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/category/functional-reactive-programming/'>functional reactive programming</a>, <a class='category' href='/category/javascript/'>javascript</a>, <a class='category' href='/category/node/'>node</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.g9labs.com/2015/04/30/building-gpx-stats-through-frp-principles-on-bacon-dot-js/" data-via="andrewhao" data-counturl="http://www.g9labs.com/2015/04/30/building-gpx-stats-through-frp-principles-on-bacon-dot-js/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2015/03/19/docker-rails-and-docker-compose-in-your-development-workflow/" title="Previous Post: Docker, Rails, and Docker Compose in your development workflow">&laquo; Docker, Rails, and Docker Compose in your development workflow</a>
+      
+      
+        <a class="basic-alignment right" href="/2015/06/01/toolbox-learning-swift-and-viper/" title="Next Post: Toolbox: learning Swift and VIPER">Toolbox: learning Swift and VIPER &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2015/09/27/strange-loop-2015-reflections/">Strange Loop 2015: Notes & Reflections</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2015/06/29/notes-on-performance-tuning-a-puma-server/">Notes on performance tuning a Puma server</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2015/06/01/toolbox-learning-swift-and-viper/">Toolbox: learning Swift and VIPER</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2015/04/30/building-gpx-stats-through-frp-principles-on-bacon-dot-js/">Building GPX stats through FRP principles with Bacon.js</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2015/03/19/docker-rails-and-docker-compose-in-your-development-workflow/">Docker, Rails, and Docker Compose in your development workflow</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/andrewhao">@andrewhao</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'andrewhao',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Andrew Hao -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'g9labs';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://www.g9labs.com/2015/04/30/building-gpx-stats-through-frp-principles-on-bacon-dot-js/';
+        var disqus_url = 'http://www.g9labs.com/2015/04/30/building-gpx-stats-through-frp-principles-on-bacon-dot-js/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,696 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>The Sweet Spot</title>
+  <meta name="author" content="Andrew Hao">
+
+  
+  <meta name="description" content="My apartmentmate Mike just upgraded his computer to an Intel Core 2 Quad-core processor. Once he got it up and running, he opened up Task Manager and &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.g9labs.com/page/7">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="The Sweet Spot" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-2330913-9']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">The Sweet Spot</a></h1>
+  
+    <h2>Andrew Hao's thoughts about software engineering, design, and anything shiny.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:www.g9labs.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/notes">Notes</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/02/24/quad-core-and-the-nerd/">Quad Core and the Nerd</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-02-24T10:15:34-08:00" pubdate data-updated="true">Feb 24<span>th</span>, 2008</time>
+        
+         | <a href="/2008/02/24/quad-core-and-the-nerd/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>My apartmentmate Mike just upgraded his computer to an Intel Core 2 Quad-core processor. Once he got it up and running, he opened up Task Manager and summoned me over to gaze at the beauty of four CPU utilization graphs, one for each core. We had to fight the urge to beat our chests and make low, guttural grunts.</p>
+
+<p>Welcome to 2008, may he who has the most cores win.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/02/18/todays-geek-hijinks/">Today&#8217;s Geek Hijinks</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-02-18T09:32:42-08:00" pubdate data-updated="true">Feb 18<span>th</span>, 2008</time>
+        
+         | <a href="/2008/02/18/todays-geek-hijinks/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3>Morning: Woke up and attempted to mount a Samba file share under Ubuntu.</h3>
+
+<p>My Gutsy server in the living room is getting a second life as a backup file server. I need to mount it in my filesystem so I can rsync certain directories on my desktop over to the server.</p>
+
+<p><code>mount -t //my_server_ip/share_folder /media/mount_folder</code></p>
+
+<p>Alas! I couldn&rsquo;t get write access into the mount point! At first I thought this was a chmod problem, so I added myself as the mount_folder owner.</p>
+
+<p><code>sudo chown username mount_folder/</code></p>
+
+<p>To no avail. So then I attempted to use the &ldquo;permit all&rdquo; chmod sledgehammer:</p>
+
+<p><code>sudo chmod 777 mount_folder/</code></p>
+
+<p>Argh! STILL no good!</p>
+
+<p>So then I went back to the drawing board and did some investigating. I could, 50% of the time, gain write access to child subfolders on the Samba share via GNOME Nautilus interface (smb://my_server_ip). Weird! Was this a Samba config problem? I didn&rsquo;t have the cajones to find out.</p>
+
+<p>As a last-ditch attempt, I tried to modify my fstab file to mount the Samba share (I read somewhere that the uid and gid option flags give you the win). Side note: you can find your username&rsquo;s uid and gid numbers from the <code>/etc/passwd file</code>.</p>
+
+<pre><code># TEMPORARY SAMBA SHARE FROM LIVINGROOM SERVER
+
+# @author Andrew
+
+//my_server_ip/archive /media/archive smbfs noauto,rw,uid=1000,gid=1000 0 0
+</code></pre>
+
+<p><em>Still</em> no good! Arghs! At this point, I gave up and simply SFTP-ed in to dump my files. Admitting defeat is a sad, sad thing.</p>
+
+<h3>Afternoon: Designed some logo comps for a Web company.</h3>
+
+<p><a href="http://blog.g9labs.com/wp-content/uploads/2008/02/logo.png"><img src="http://blog.g9labs.com/wp-content/uploads/2008/02/logo.png" alt="Logo I started on." /></a></p>
+
+<p>I&rsquo;m working under contract from Ryan Waliany. This site should be doing some cool things. Unfortunately, I can&rsquo;t reveal too much. All this to say that I&rsquo;ve taken a long hiatus from design and I really miss it.</p>
+
+<h3>Late Afternoon: Set up Google Apps for g9labs.com</h3>
+
+<p>I gave in to the hype, and began setting up a Google Apps For Your Domain (GFYD) account for this g9labs site, primarily so I can hook into the awesome GMail interface instead of being chained to the Thunderbird client.</p>
+
+<p>This was a multi-step process of:</p>
+
+<ol>
+<li><p> <strong>Verifying ownership of your domain. </strong>Google has you modify a CNAME entry on your domain so they can ping it to check that it&rsquo;s changed. I marched happily over to the <a href="http://dreamhost.com">Dreamhost</a> panel where I found the DNS page for <a href="http://g9labs.com">g9labs.com</a>. There I added a CNAME value of googlexxxxxxxxx (a unique value given to you) and set its CNAME value to &ldquo;google.com&rdquo;.</p></li>
+<li><p> While Google takes 48 hours to verify you&rsquo;ve done the right steps, you can go ahead and <strong>modify the MX records for your domain </strong>so mail gets sent on over to Google instead of your Dreamhost server. This was easily set in the Dreamhost panel under Mail >> MX Records. You change your MX records to Google&rsquo;s special MX server, and you&rsquo;re on your way!</p></li>
+<li><p> I&rsquo;m waiting for verification to go through, then I&rsquo;ll talk about how to get <strong>IMAP for GFYD working</strong>.</p></li>
+</ol>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/02/17/noam-chomsky-is-the-man/">Noam Chomsky is The Man</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-02-17T15:53:54-08:00" pubdate data-updated="true">Feb 17<span>th</span>, 2008</time>
+        
+         | <a href="/2008/02/17/noam-chomsky-is-the-man/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Why?</p>
+
+<p>The man is a respected thinker, theorist and activist. I&rsquo;ve had several Mass Communications classes devote a couple of sections to his thoughts about mass media and its effect in forming dissent and complacency in the masses.</p>
+
+<p>The man took a period of his life in the 50&rsquo;s devoted to formalizing computer languages (he is by profession, a linguist). We just went over <a href="http://en.wikipedia.org/wiki/Chomsky_normal_form">Chomsky normal form</a> in my CS164 (compilers) course&mdash;a recursive method for generating languages from a set of rules.</p>
+
+<p>My CS and humanities world collide, but this man has done it way before. How stunning. <a href="http://en.wikipedia.org/wiki/Noam_Chomsky">Noam Chomsky</a> is The Man.</p>
+
+<p>(Disclaimer: I don&rsquo;t agree with very many of his views, but the purpose of this post is to point out that Mr. Chomsky is a man who&rsquo;s pretty much Done It All).</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/02/03/a-new-blog-is-coming/">A new blog is coming!</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-02-03T07:38:52-08:00" pubdate data-updated="true">Feb 3<span>rd</span>, 2008</time>
+        
+         | <a href="/2008/02/03/a-new-blog-is-coming/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I&rsquo;m forking this blog in two: a design/development blog and a personal blog.</p>
+
+<p>I&rsquo;ll be keeping <a href="http://blog.g9labs.com">blog.g9labs.com</a> as my technical blog: if you stay with me here, you&rsquo;ll find me muse about design, code and entrepreneurship as I come across it in my studies and in my work.</p>
+
+<p>If you care about the nitty-gritty of my personal life, follow me at <a href="http://blog.andrewhao.com">blog.andrewhao.com</a>. There I&rsquo;ll post more introspective posts on my personal life. You might find photos of adventures I take with my friends, or you might be surprised with the occasional story or poem or song. RSS readers: you might want to <a href="http://blog.andrewhao.com/feed/">add the new feed</a>.</p>
+
+<p>Xanga readers: you&rsquo;ll be reading most of my content from my personal blog. You&rsquo;ll probably miss most of the content at my technical blog (but you&rsquo;re welcome over any time!)</p>
+
+<p>You&rsquo;ll see new layouts come up in the months to come, but please be patient. I&rsquo;m way stoked to get this up and running.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/01/27/wordpress-bughunt/">Wordpress Bughunt</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-01-27T14:48:04-08:00" pubdate data-updated="true">Jan 27<span>th</span>, 2008</time>
+        
+         | <a href="/2008/01/27/wordpress-bughunt/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I spent a good four hours today digging through <a href="http://www.wordpress.org">Wordpress</a> code, trying to get our <a href="http://www.ocf.berkeley.edu/~ccf">Cal Christian Fellowship</a> Web site back up.</p>
+
+<p>The problem: the page seemed to freeze when loading page content. The request would time out, leaving a half-loaded page sans content. I dug into the theme at first, trying to track down which function call could have barfed. I tracked it into the apply_filters() call in the the post.</p>
+
+<p>Wordpress uses a filtering system to manage content. This lets us add filters over all kinds of content. I realize that the problem was stemming from the <a href="http://dev.wp-plugins.org/wiki/TextControl">Text Control</a> plugin, where something had barfed!</p>
+
+<p>I disabled the plugin and voila! We were good to go again.</p>
+
+<p>Since we only really used Textile markup on the CCF site, I just re-enabled the default Textile plugin and we were back in business.</p>
+
+<p>I don&rsquo;t know for the life of me what went wrong over the weekend in the Text Control plugin, but I don&rsquo;t have the cajones or the time to dig through server logs, et. al. and find out.</p>
+
+<p>Geeking out like nobody&rsquo;s business,</p>
+
+<p>-Andrew</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2007/12/11/im-ready-for-the-winter/">I&#8217;m ready for the winter.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-12-11T11:24:15-08:00" pubdate data-updated="true">Dec 11<span>th</span>, 2007</time>
+        
+         | <a href="/2007/12/11/im-ready-for-the-winter/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Okay, I confess. I&rsquo;ve been daydreaming about winter break:</p>
+
+<ol>
+<li><p> Sleeping in.</p></li>
+<li><p> The laughter of friends.</p></li>
+<li><p> Taking a day trip with a camera to Monterey/Carmel (or anywhere awesome).</p></li>
+<li><p> Working (uninterrupted) on <a href="http://www.wejoinin.com">Wejoinin</a>.</p></li>
+<li><p> Redesigning the <a href="http://blog.g9labs.com">blog</a>? Updating the <a href="http://portfolio.g9labs.com">portfolio</a>? (Good Lord, it&rsquo;s about time).</p></li>
+<li><p> Kicking it with Jesus.</p></li>
+<li><p> Working on a few songs, and maybe trying a bit of recording.</p></li>
+<li><p> Reading, reading, reading, then writing, writing, writing.</p></li>
+<li><p> Spending the holidays with family.</p></li>
+</ol>
+
+
+<p>And hooray! I&rsquo;m finally done with interviews. I&rsquo;ll be taking an internship at <a href="http://www.apple.com">Apple</a> this summer doing software engineering and Web development. I&rsquo;m real excited about (and very thankful for) the opportunity to hang out with the cool kids.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2007/12/05/feeling-awesome-today/">Feeling awesome today</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-12-05T02:55:08-08:00" pubdate data-updated="true">Dec 5<span>th</span>, 2007</time>
+        
+         | <a href="/2007/12/05/feeling-awesome-today/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>So for our <a href="http://inst.eecs.berkeley.edu/~cs188/fa07/announcements.html">CS188 (Artificial Intelligence)</a> project, <a href="http://inst.eecs.berkeley.edu/~cs188/fa07/projects/contest/contest.html">Capture-the-Flag Pac-Man</a>, I&rsquo;m responsible for writing a script that does some processing and analysis on a game board, simulating a Pac-Man agent (my other group members are responsible for far cooler things, like inference and heuristics, but humor me here).</p>
+
+<p>I most definitely need at least several hours of computation time to get the results I need, but figured that I&rsquo;d do best by dividing up the labor between CPUs. So last night I set five cores&#8217; worth of computational power a-workin&#8217;&mdash;1 on my desktop, 2 on my laptop and 2 remote cores on Hsiu-Fan&rsquo;s sweet desktop.</p>
+
+<p>(Then I disconnected sometime last night from Hsiu-Fan&rsquo;s computer, abruptly killing my processes. I&rsquo;m back on using UNIX <a href="http://www.askbjoernhansen.com/2006/02/07/happy_unix_screen.html"><code>screen</code></a> because I read I can remotely detach windows and processes, but I&rsquo;m actually not sure if the process keeps chuggin&#8217; in the case when your program spawns X windows and you&rsquo;ve disconnected).</p>
+
+<p>So humor me here, I feel pretty awesome right now. My room&rsquo;s a bit warm with the sheer heat dissipation from my computers, but at least that negates the need for human companionship. Tally-ho!</p>
+
+<p>&mdash;&ndash; Edit: the joys of Python:</p>
+
+<p><img src="http://imgs.xkcd.com/comics/python.png" alt="" /></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2007/12/03/meeting-joe-hewitt/">Meeting Joe Hewitt</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-12-03T17:45:30-08:00" pubdate data-updated="true">Dec 3<span>rd</span>, 2007</time>
+        
+         | <a href="/2007/12/03/meeting-joe-hewitt/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I shook <a href="http://www.joehewitt.com">Joe Hewitt</a>&rsquo;s hand today (psst, he&rsquo;s the guy who did tons of Mozilla stuff but most notably built <a href="http://www.getfirebug.com/">Firebug</a>). I stammered a lot. But that&rsquo;s okay, because I shook Joe Hewitt&rsquo;s hand.</p>
+
+<p>&ldquo;Fanboy&rdquo; says the Facebook engineer behind me, under his breath.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2007/11/15/more-scenes/">More scenes</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-11-15T06:10:47-08:00" pubdate data-updated="true">Nov 15<span>th</span>, 2007</time>
+        
+         | <a href="/2007/11/15/more-scenes/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><em>Disclaimer: about 95% of you won&rsquo;t get this. The other 5% should consider getting a life.</em></p>
+
+<p>So we&rsquo;re in CS lecture (this is with Prof. Papadmitrou), and one student in the front raises his hand and asks, &ldquo;Isn&rsquo;t the Traveling Salesman Problem not yet proven NP-complete?&rdquo;</p>
+
+<p>Papadmitrou turns around with a concerned expression on his face. &ldquo;No, it is definitely NP-complete. What makes you think that?&rdquo;</p>
+
+<p>&ldquo;Oh, I dunno. I just thought I heard you say it or read it somewhere.&rdquo;</p>
+
+<p>&ldquo;It is most definitely NP-complete.&rdquo; Papadmitrou talks for a few moments about why it is so. &ldquo;I should know, I proved it in my thesis.&rdquo; Then he follows it up with this smile.</p>
+
+<p>Our jaws all drop.<em> </em>Everybody&rsquo;s thinking the same thing:<em> </em>this man is a <em>gangster</em>. There is laughter and applause for a minute or two.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2007/10/25/sensations-6/">Sensations</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-10-25T19:24:16-07:00" pubdate data-updated="true">Oct 25<span>th</span>, 2007</time>
+        
+         | <a href="/2007/10/25/sensations-6/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://www.flickr.com/photos/andrewhao/1756742112/"><img src="http://farm3.static.flickr.com/2379/1756742112_a54cf5e9a8.jpg" alt="Sensations - Awaken the Dawn" /></a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/page/8/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/page/6/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2015/09/27/strange-loop-2015-reflections/">Strange Loop 2015: Notes & Reflections</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2015/06/29/notes-on-performance-tuning-a-puma-server/">Notes on performance tuning a Puma server</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2015/06/01/toolbox-learning-swift-and-viper/">Toolbox: learning Swift and VIPER</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2015/04/30/building-gpx-stats-through-frp-principles-on-bacon-dot-js/">Building GPX stats through FRP principles with Bacon.js</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2015/03/19/docker-rails-and-docker-compose-in-your-development-workflow/">Docker, Rails, and Docker Compose in your development workflow</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/andrewhao">@andrewhao</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'andrewhao',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Andrew Hao -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'g9labs';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
